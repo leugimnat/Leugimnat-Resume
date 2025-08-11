@@ -9,18 +9,61 @@
     <title>Resume Website</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">@leugimnat</a>
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Portfolio</a>
-            <a href="#" >Contact</a>
-        </nav>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Miguel Antonio V Tan - Home">
+                <span class="logo-text">@leugimnat</span>
+            </a>
+
+            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" aria-current="page">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="nav-link">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
-    <section class="home">
+    <section id="home" class="home">
         <div class="home-img">
             <img src="images/pt1.JPG" alt="Picture of Miguel Antonio V Tan in Taiwan." loading="lazy" decoding="async">
         </div>
@@ -74,28 +117,159 @@
 </body>
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
-      <p class="footer-status">Open to Front-End / Full-Stack Roles</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3 class="footer-logo">@leugimnat</h3>
+        <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
+        <p class="footer-status">
+          <span class="status-indicator"></span>
+          Open to Front-End / Full-Stack Roles
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-contact">
+          <h4>Get In Touch</h4>
+          <div class="contact-info">
+            <a href="mailto:tan.miguelantoniov@gmail.com" class="contact-email">
+              <i class="fa-solid fa-envelope"></i>
+              tan.miguelantoniov@gmail.com
+            </a>
+            <div class="contact-location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Cagayan de Oro City, Philippines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://github.com/leugimnat" aria-label="GitHub Profile" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/miguel-antonio-tan-945499255/" aria-label="LinkedIn Profile" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/zeuqzavleugimnat/" aria-label="Facebook Profile" title="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+              <span>Facebook</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="footer-contact">
-      <a href="mailto:tan.miguelantoniov@gmail.com">tan.miguelantoniov@gmail.com</a>
-      <span class="dot">•</span>
-      <span>Cagayan de Oro City, Philippines</span>
+    <div class="footer-bottom">
+      <div class="footer-tech">
+        <span class="tech-label">Tech Stack:</span>
+        <div class="tech-stack">
+          <span class="tech-item">HTML</span>
+          <span class="tech-item">CSS</span>
+          <span class="tech-item">JavaScript</span>
+          <span class="tech-item">MERN</span>
+          <span class="tech-item">MEAN</span>
+        </div>
+      </div>
+      <p class="footer-note">
+        <i class="fa-solid fa-heart"></i>
+        Crafted with care • Accessible & responsive • Last updated Aug 2025
+      </p>
     </div>
-
-    <div class="footer-social">
-      <a href="https://github.com/leugimnat" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/miguel-antonio-tan-945499255/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/zeuqzavleugimnat/" aria-label="Facebook / X"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-
-    <p class="footer-tech">Stack: HTML • CSS • JS • MERN</p>
-    <p class="footer-note">Accessible & responsive. Last updated Aug 2025.</p>
   </div>
 </footer>
 <script>
+  // Update year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu functionality
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbar = document.querySelector('.navbar');
+
+  // Toggle mobile menu
+  mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    // Update aria-expanded attribute
+    const isExpanded = navMenu.classList.contains('active');
+    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+  });
+
+  // Close mobile menu when clicking on nav links
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+      mobileMenuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Smooth scrolling for navigation links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+
+          // Update active link
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
+  });
+
+  // Update active link on scroll
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPos = window.scrollY + 100;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
 </script>
 </html>

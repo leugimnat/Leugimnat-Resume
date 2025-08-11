@@ -1251,3 +1251,586 @@ span{
     font-size: 0.9rem;
   }
 }
+
+/* Experience Page Styles */
+.experience-page {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.experience-hero {
+  background: linear-gradient(135deg, #000 0%, #111 50%, #000 100%);
+  padding: 8rem 9% 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(230, 139, 4, 0.1) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e68b04;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* Work Experience Section */
+.work-experience {
+  padding: 8rem 0;
+  background: #0a0a0a;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #e68b04, #ffa726, #e68b04);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 5rem;
+  padding-left: 90px;
+}
+
+.experience-marker {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(45deg, #e68b04, #ffa726);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(230, 139, 4, 0.6);
+  border: 3px solid #000;
+}
+
+.experience-content {
+  background: rgba(230, 139, 4, 0.05);
+  border: 1px solid rgba(230, 139, 4, 0.2);
+  border-radius: 15px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(230, 139, 4, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.experience-content:hover::before {
+  left: 100%;
+}
+
+.experience-content:hover {
+  background: rgba(230, 139, 4, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(230, 139, 4, 0.2);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.job-info h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #e68b04;
+  margin: 0 0 0.5rem 0;
+}
+
+.company {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.location {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.experience-date {
+  background: rgba(230, 139, 4, 0.2);
+  color: #e68b04;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.job-description {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.experience-details h5 {
+  color: #e68b04;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+
+.responsibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.responsibility-list li {
+  color: #ccc;
+  padding: 0.8rem 0;
+  padding-left: 2.5rem;
+  position: relative;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.responsibility-list li::before {
+  content: '▶';
+  color: #e68b04;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+}
+
+.tech-stack-used {
+  margin-top: 2rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Project Experience Section */
+.project-experience {
+  padding: 8rem 0;
+  background: #111;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.project-card {
+  background: rgba(230, 139, 4, 0.05);
+  border: 1px solid rgba(230, 139, 4, 0.2);
+  border-radius: 15px;
+  padding: 3rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(230, 139, 4, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  background: rgba(230, 139, 4, 0.1);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(230, 139, 4, 0.3);
+}
+
+.project-icon {
+  font-size: 3.5rem;
+  color: #e68b04;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-description {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.project-features h5 {
+  color: #e68b04;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.project-features li {
+  color: #ccc;
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.project-features li::before {
+  content: '✓';
+  color: #e68b04;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* Achievements Section */
+.achievements {
+  padding: 8rem 0;
+  background: #0a0a0a;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.achievement-card {
+  background: rgba(230, 139, 4, 0.05);
+  border: 1px solid rgba(230, 139, 4, 0.2);
+  border-radius: 15px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(230, 139, 4, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.achievement-card:hover::before {
+  left: 100%;
+}
+
+.achievement-card:hover {
+  background: rgba(230, 139, 4, 0.1);
+  transform: translateY(-8px) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(230, 139, 4, 0.3);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  color: #e68b04;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.achievement-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.achievement-year {
+  display: inline-block;
+  background: rgba(230, 139, 4, 0.2);
+  color: #e68b04;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Experience Page Responsive Styles */
+@media (max-width: 768px) {
+  .experience-hero {
+    padding: 6rem 5% 4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .work-experience,
+  .project-experience,
+  .achievements {
+    padding: 5rem 0;
+  }
+
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .experience-item {
+    padding-left: 70px;
+  }
+
+  .experience-marker {
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+
+  .experience-content {
+    padding: 2rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .job-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .company {
+    font-size: 1.4rem;
+  }
+
+  .experience-date {
+    align-self: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 2rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .achievement-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-hero {
+    padding: 4rem 3% 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .experience-content {
+    padding: 1.5rem;
+  }
+
+  .job-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .company {
+    font-size: 1.2rem;
+  }
+
+  .job-description {
+    font-size: 1.1rem;
+  }
+
+  .responsibility-list li {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-icon {
+    font-size: 3rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .achievement-card {
+    padding: 1.5rem;
+  }
+
+  .achievement-icon {
+    font-size: 2.5rem;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .tech-tags {
+    gap: 0.6rem;
+  }
+
+  .tech-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

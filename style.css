@@ -2045,7 +2045,7 @@ span{
 
 .job-description {
   color: #ccc;
-  font-size: 1.2rem;
+  font-size: 1.56rem;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -2069,7 +2069,7 @@ span{
   padding-left: 2.5rem;
   position: relative;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.43rem;
 }
 
 .responsibility-list li::before {
@@ -2155,7 +2155,7 @@ span{
   color: #ccc;
   line-height: 1.7;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.43rem;
 }
 
 .project-features h5 {
@@ -2177,6 +2177,7 @@ span{
   padding-left: 2rem;
   position: relative;
   line-height: 1.6;
+  font-size: 1.3rem;
 }
 
 .project-features li::before {
@@ -2263,7 +2264,7 @@ span{
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.43rem;
 }
 
 .achievement-year {
@@ -2401,11 +2402,23 @@ span{
   }
 
   .job-description {
-    font-size: 1.1rem;
+    font-size: 1.43rem;
   }
 
   .responsibility-list li {
-    font-size: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+  }
+
+  .project-features li {
+    font-size: 1.17rem;
+  }
+
+  .achievement-card p {
+    font-size: 1.3rem;
   }
 
   .project-card {

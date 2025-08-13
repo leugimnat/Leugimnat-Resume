@@ -1214,7 +1214,7 @@ span{
 
 .location {
   color: #ccc;
-  font-size: 1.1rem;
+  font-size: 1.43rem;
   margin-bottom: 2rem;
 }
 
@@ -1246,6 +1246,7 @@ span{
   padding-left: 2rem;
   position: relative;
   line-height: 1.6;
+  font-size: 1.3rem;
 }
 
 .coursework-list li::before {
@@ -1325,6 +1326,7 @@ span{
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .cert-status {
@@ -1521,6 +1523,19 @@ span{
 
   .institution {
     font-size: 1.2rem;
+  }
+
+  .location {
+    font-size: 1.56rem;
+  }
+
+  .coursework-list li,
+  .achievement-list li {
+    font-size: 1.43rem;
+  }
+
+  .cert-card p {
+    font-size: 1.43rem;
   }
 
   .cert-card {

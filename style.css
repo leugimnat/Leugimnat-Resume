@@ -1229,12 +1229,13 @@ span{
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  padding: 12px;
 }
 
 .coursework-list,
 .achievement-list {
   list-style: none;
-  padding: 0;
+  padding: 12px;
   margin: 0;
 }
 
@@ -2169,7 +2170,8 @@ span{
 /* Achievements Section */
 .achievements {
   padding: 8rem 0;
-  background: #0a0a0a;
+  background: rgba(230, 139, 4, 0.05);
+  border: 1px solid rgba(230, 139, 4, 0.2);
 }
 
 .achievements-grid {

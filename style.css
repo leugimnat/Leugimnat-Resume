@@ -1725,6 +1725,8 @@ span{
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .gallery-modal.active {
@@ -1734,18 +1736,24 @@ span{
 
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: calc(100vw - 4rem);
+  max-height: calc(100vh - 4rem);
   background: #111;
   border-radius: 15px;
   overflow: hidden;
   border: 2px solid #e68b04;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-image {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .modal-close {
@@ -1795,9 +1803,13 @@ span{
     font-size: 0.9rem;
   }
 
+  .gallery-modal {
+    padding: 1rem;
+  }
+
   .modal-content {
-    max-width: 95%;
-    max-height: 85%;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
   }
 }
 

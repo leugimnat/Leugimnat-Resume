@@ -1561,6 +1561,11 @@ span{
   padding: 8rem 0;
 }
 
+/* Education Gallery Styles */
+.experience-gallery {
+  padding: 8rem 0;
+}
+
 .gallery-subtitle {
   text-align: center;
   font-size: 1.6rem;

@@ -1561,11 +1561,6 @@ span{
   padding: 8rem 0;
 }
 
-/* Education Gallery Styles */
-.experience-gallery {
-  padding: 8rem 0;
-}
-
 .gallery-subtitle {
   text-align: center;
   font-size: 1.6rem;
@@ -1910,8 +1905,8 @@ span{
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  margin-top: 4rem;
+  gap: 10rem;
+  margin-top: 10rem;
 }
 
 .stat-item {
@@ -1920,14 +1915,14 @@ span{
 
 .stat-number {
   display: block;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
   color: #e68b04;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: #ccc;
   font-weight: 500;
 }
@@ -2304,7 +2299,7 @@ span{
   }
 
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .work-experience,

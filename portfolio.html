@@ -1,583 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio - Miguel Antonio V Tan</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Miguel Antonio V Tan - Home">
-                <span class="logo-text">@leugimnat</span>
-            </a>
+      <div class="nav-container">
+        <a href="index.html" class="logo" aria-label="Miguel Antonio V Tan - Home">
+          <span class="logo-text">@leugimnat</span>
+        </a>
 
-            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">
-                            <i class="fa-solid fa-house"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="education.html" class="nav-link">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span>Education</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="experience.html" class="nav-link">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <span>Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="portfolio.html" class="nav-link active" aria-current="page">
-                            <i class="fa-solid fa-folder-open"></i>
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#contact" class="nav-link">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="education.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="experience.html" class="nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html" class="nav-link active" aria-current="page">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Portfolio</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-            <button type="button" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </header>
 
-    <main class="portfolio-page">
-        <section class="portfolio-hero">
-            <div class="hero-content">
-                <h1>My <span>Portfolio</span></h1>
-                <p class="hero-subtitle">A showcase of my projects, technical skills, and creative solutions. Each project represents a journey of learning, problem-solving, and innovation in software development.</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Technologies Used</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
+    <main>
+      <!-- Hero (uses existing experience-hero styles) -->
+      <section class="experience-hero">
+        <div class="hero-content">
+          <h1>Project <span>Portfolio</span></h1>
+          <p class="hero-subtitle">
+            The following are projects that I have worked on. A curated selection of my recent projects across web development, UI, and backend work. Each project highlights my
+            approach to problem‑solving, clean design, and scalable implementation. 
+          </p>
+          <p class="hero-subtitle">
+            My projects right now aren't that much, but I am currently working on a few projects that I will be adding to this portfolio for view.
+          </p>
+          <div class="portfolio-cta">
+            <a class="btn" href="index.html">View Full Website</a>
+            <a class="btn" href="index.html#contact">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid (reuses .projects-grid and .project-card styles) -->
+      <section class="portfolio-section-dark">
+        <div class="container">
+          <h2 class="section-title">Featured <span>Work</span></h2>
+          <div class="gallery-filters">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="web">Web Apps</button>
+            <button type="button" class="filter-btn" data-filter="backend">Backend</button>
+            <button type="button" class="filter-btn" data-filter="design">UI / Front-End</button>
+          </div>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card media-rich" data-category="web">
+              <div class="project-icon"><i class="fa-solid fa-tools"></i></div>
+              <h3>RequeXU: Work Order & Dispatch Management</h3>
+              <p class="project-description">
+                University capstone delivered to production for multi‑campus maintenance requests: authentication, email alerts,
+                role‑based access, and admin analytics.
+              </p>
+
+              <div class="project-media">
+                <div class="video-embed" aria-label="RequeXU Demo Video">
+                  <iframe src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview" allow="autoplay" title="RequeXU Project Demo Video"></iframe>
                 </div>
-            </div>
-        </section>
+              </div>
 
-        <section class="featured-project">
-            <div class="container">
-                <h2 class="section-title">Featured <span>Project</span></h2>
-
-                <div class="project-showcase">
-                    <div class="project-header">
-                        <div class="project-title-section">
-                            <h3>RequeXU: An Adaptive Web Application for Streamlined Multi-Campus Work Order and Dispatch Management</h3>
-                            <p class="project-subtitle">Capstone Project • Xavier University Physical Plant Office</p>
-                            <div class="project-badges">
-                                <span class="badge featured">Featured</span>
-                                <span class="badge capstone">Capstone</span>
-                                <span class="badge deployed">Deployed</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview" target="_blank" rel="noopener" class="project-link">
-                                <i class="fa-solid fa-external-link"></i>
-                                <span>View Demo</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-description">
-                            <div class="description-section">
-                                <h4>Project Overview</h4>
-                                <p>The Physical Plant Office (PPO) is an integral part of Xavier University, handling physical infrastructure and providing manpower for utilities and functions across different campuses. This project addressed the inefficiencies of their paper-based work order processes.</p>
-                            </div>
-
-                            <div class="description-section">
-                                <h4>Problem Statement</h4>
-                                <p>Previous work order processes dealt with paper-based systems, creating inherent issues amplified by the scale of operations across multiple campuses. This provided ample reason for implementing better technologies and streamlining processes.</p>
-                            </div>
-
-                            <div class="description-section">
-                                <h4>Solution & Impact</h4>
-                                <p>The system provides an accessible work order submission form without manual processes, along with centralized dispatch and management capabilities. It successfully facilitates and serves students, staff, and faculty across all Xavier University campuses.</p>
-                            </div>
-
-                            <div class="key-features">
-                                <h4>Key Features</h4>
-                                <ul class="features-list">
-                                    <li><i class="fa-solid fa-check"></i> Request list functions with accurate work order detailing</li>
-                                    <li><i class="fa-solid fa-check"></i> Centralized management across different campus orientations</li>
-                                    <li><i class="fa-solid fa-check"></i> Controlled monitoring and dispatch of manpower and resources</li>
-                                    <li><i class="fa-solid fa-check"></i> In-app and email notifications for real-time updates</li>
-                                    <li><i class="fa-solid fa-check"></i> Graphical and analytical data for work order monitoring</li>
-                                    <li><i class="fa-solid fa-check"></i> Google OAuth integration for secure authentication</li>
-                                    <li><i class="fa-solid fa-check"></i> Mobile-responsive Progressive Web App (PWA)</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-stack">
-                                <h4>Technologies Used</h4>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Laravel (PHP)</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Google APIs</span>
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS3</span>
-                                    <span class="tech-tag">PWA</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-media">
-                            <div class="media-container">
-                                <div class="video-embed">
-                                    <iframe src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview"
-                                            width="100%" height="400" allow="autoplay"
-                                            title="RequeXU Project Demo Video">
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-gallery">
-                        <h4>Project Screenshots</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <img src="images/requexu/home_page.png" alt="RequeXU home page and mobile PWA view" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Home Page & Mobile PWA</h5>
-                                    <p>Responsive design with mobile Progressive Web App functionality</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/admin_dashboard.png" alt="Administrator dashboard panel" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Administrator Dashboard</h5>
-                                    <p>Comprehensive admin panel for managing work orders and resources</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/analytics1.png" alt="Administrator analytics panel" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Analytics Dashboard</h5>
-                                    <p>Data visualization and performance metrics for informed decision-making</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/request_tab.png" alt="Administrator request view for dispatching" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Request Management</h5>
-                                    <p>Streamlined interface for reviewing and dispatching work orders</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/worker_workload.png" alt="Worker analytics for performance tracking" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Worker Analytics</h5>
-                                    <p>Performance tracking and workload distribution insights</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/login.png" alt="Login page with Google authentication" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Authentication System</h5>
-                                    <p>Secure login with Google OAuth integration</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/my_requests.png" alt="Work order request overview page" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>My Requests</h5>
-                                    <p>User-friendly interface for tracking personal work order requests</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/workorder_details.png" alt="Work order request detailed view" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Request Details</h5>
-                                    <p>Comprehensive view of work order specifications and status</p>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/requexu/transaction.png" alt="Work order transaction and review page" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <h5>Transaction Management</h5>
-                                    <p>Complete transaction history and review system</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="card-gallery">
+                <h5>Screenshots</h5>
+                <div class="card-gallery-grid">
+                  <div class="card-gallery-item" data-modal-img="images/requexu/home_page.png">
+                    <img src="images/requexu/home_page.png" alt="RequeXU home page and mobile PWA view" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/admin_dashboard.png">
+                    <img src="images/requexu/admin_dashboard.png" alt="Administrator dashboard panel" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/analytics1.png">
+                    <img src="images/requexu/analytics1.png" alt="Analytics dashboard view" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/request_tab.png">
+                    <img src="images/requexu/request_tab.png" alt="Request management and dispatch" loading="lazy" />
+                  </div>
                 </div>
+              </div>
+
+              <div class="project-features">
+                <h5>Key Features:</h5>
+                <ul>
+                  <li>Role‑based access and Google OAuth</li>
+                  <li>Email notifications and status tracking</li>
+                  <li>Admin reporting and dashboards</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel/PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Google APIs</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="#" aria-disabled="true">Case Study (soon)</a>
+              </div>
             </div>
-        </section>
 
-        <section class="other-projects">
-            <div class="container">
-                <h2 class="section-title">Other <span>Projects</span></h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <h3>Portfolio Website</h3>
-                        <p class="project-description">
-                            A modern, responsive portfolio website showcasing notable projects and skills gained and technologies mastered.
-                        </p>
-                        <div class="project-features">
-                            <h5>Key Features:</h5>
-                            <ul>
-                                <li>Responsive design</li>
-                                <li>Smooth animations</li>
-                                <li>SEO optimized</li>
-                                <li>Fast loading times</li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="index.html" class="project-link">
-                                <i class="fa-solid fa-external-link"></i>
-                                <span>View Live</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-file-alt"></i>
-                        </div>
-                        <h3>Resume Website</h3>
-                        <p class="project-description">
-                            A modern, responsive resume website showcasing skills, projects linking to my portfolio website, and professional experience
-                            with clean design and smooth animations.
-                        </p>
-                        <div class="project-features">
-                            <h5>Key Features:</h5>
-                            <ul>
-                                <li>Responsive design</li>
-                                <li>Smooth animations</li>
-                                <li>SEO optimized</li>
-                                <li>Fast loading times</li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="index.html" class="project-link">
-                                <i class="fa-solid fa-external-link"></i>
-                                <span>View Live</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <h3>Web Development Projects</h3>
-                        <p class="project-description">
-                            Various web development projects built during my internship at Unified Mentor, focusing on modern web technologies
-                            and best practices.
-                        </p>
-                        <div class="project-features">
-                            <h5>Key Features:</h5>
-                            <ul>
-                                <li>React.js applications</li>
-                                <li>RESTful API development</li>
-                                <li>Database integration</li>
-                                <li>Responsive design</li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="experience.html" class="project-link">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <span>Learn More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Project 2 -->
+            <div class="project-card" data-category="design">
+              <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+              <h3>Resume Website</h3>
+              <p class="project-description">
+                A responsive resume site with accessible navigation, contact form, and smooth interactions.
+              </p>
+              <div class="project-features">
+                <h5>Highlights:</h5>
+                <ul>
+                  <li>Modern UI with mobile menu & focus states</li>
+                  <li>Contact form with validation and async submit</li>
+                  <li>Reusable components and typography scale</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="index.html">Open</a>
+              </div>
             </div>
-        </section>
 
-        <section class="skills-technologies">
-            <div class="container">
-                <h2 class="section-title">Skills & <span>Technologies</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="category-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <h3>Frontend Development</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">Responsive Design</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="category-icon">
-                            <i class="fa-solid fa-server"></i>
-                        </div>
-                        <h3>Backend Development</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">Laravel</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express.js</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="category-icon">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-                        <h3>Database & Tools</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Google APIs</span>
-                            <span class="skill-tag">PWA</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="category-icon">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-                        <h3>Soft Skills</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Project Management</span>
-                            <span class="skill-tag">Team Leadership</span>
-                            <span class="skill-tag">Problem Solving</span>
-                            <span class="skill-tag">Communication</span>
-                            <span class="skill-tag">Collaboration</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Project 3 -->
+            <div class="project-card" data-category="web">
+              <div class="project-icon"><i class="fa-solid fa-folder-open"></i></div>
+              <h3>Portfolio Website</h3>
+              <p class="project-description">
+                The page you're viewing: standalone portfolio with filters, reusable cards, and consistent branding.
+              </p>
+              <div class="project-features">
+                <h5>Highlights:</h5>
+                <ul>
+                  <li>Category filters and responsive grid</li>
+                  <li>Shared design system with the main site</li>
+                  <li>Clean, accessible markup</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="portfolio.html">Open</a>
+              </div>
             </div>
-        </section>
+
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">@leugimnat</h3>
-                    <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
-                    <p class="footer-status">
-                        <span class="status-indicator"></span>
-                        Open to Front-End / Full-Stack Roles / Internship Opportunities
-                    </p>
-                </div>
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <h3 class="footer-logo">@leugimnat</h3>
+            <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
+            <p class="footer-status">
+              <span class="status-indicator"></span>
+              Open to Front-End / Full-Stack Roles / Internship Opportunities
+            </p>
+          </div>
 
-                <div class="footer-links">
-                    <div class="footer-contact">
-                        <h4>Get In Touch</h4>
-                        <div class="contact-info">
-                            <a href="mailto:tan.miguelantoniov@gmail.com" class="contact-email">
-                                <i class="fa-solid fa-envelope"></i>
-                                tan.miguelantoniov@gmail.com
-                            </a>
-                            <div class="contact-location">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>Cagayan de Oro City, Philippines</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-social">
-                        <h4>Connect</h4>
-                        <div class="social-links">
-                            <a href="https://github.com/leugimnat" aria-label="GitHub Profile" title="GitHub">
-                                <i class="fa-brands fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/miguel-antonio-tan-945499255/" aria-label="LinkedIn Profile" title="LinkedIn">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://www.facebook.com/zeuqzavleugimnat/" aria-label="Facebook Profile" title="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                                <span>Facebook</span>
-                            </a>
-                        </div>
-                    </div>
+          <div class="footer-links">
+            <div class="footer-contact">
+              <h4>Get In Touch</h4>
+              <div class="contact-info">
+                <a href="mailto:tan.miguelantoniov@gmail.com" class="contact-email">
+                  <i class="fa-solid fa-envelope"></i>
+                  tan.miguelantoniov@gmail.com
+                </a>
+                <div class="contact-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Cagayan de Oro City, Philippines</span>
                 </div>
+              </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="footer-tech">
-                    <span class="tech-label">Tech Stack:</span>
-                    <div class="tech-stack">
-                        <span class="tech-item">HTML</span>
-                        <span class="tech-item">CSS</span>
-                        <span class="tech-item">JavaScript</span>
-                    </div>
-                </div>
-                <p class="footer-note">
-                    <i class="fa-solid fa-heart"></i>
-                    Crafted with care • Accessible & responsive • Last updated Aug 2025
-                </p>
+            <div class="footer-social">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a href="https://github.com/leugimnat" aria-label="GitHub Profile" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/miguel-antonio-tan-945499255/" aria-label="LinkedIn Profile" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/zeuqzavleugimnat/" aria-label="Facebook Profile" title="Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Facebook</span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span class="tech-label">Tech Stack:</span>
+            <div class="tech-stack">
+              <span class="tech-item">HTML</span>
+              <span class="tech-item">CSS</span>
+              <span class="tech-item">JavaScript</span>
+            </div>
+          </div>
+          <p class="footer-note">
+            <i class="fa-solid fa-heart"></i>
+            Crafted with care • Accessible & responsive • Last updated Aug 2025
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Update year
-        document.getElementById('year').textContent = new Date().getFullYear();
+      // Update year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobile menu functionality
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const navbar = document.querySelector('.navbar');
+      // Mobile menu functionality
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navbar = document.querySelector('.navbar');
 
-        // Toggle mobile menu
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.contains('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+      });
 
-            // Update aria-expanded attribute
-            const isExpanded = navMenu.classList.contains('active');
-            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
         });
+      });
 
-        // Close mobile menu when clicking on nav links
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          mobileMenuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
+      // Filters for projects
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'block';
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
             } else {
-                navbar.classList.remove('scrolled');
+              card.style.opacity = '0';
+              card.style.transform = 'scale(0.95)';
+              setTimeout(() => {
+                if (card.style.opacity === '0') card.style.display = 'none';
+              }, 200);
             }
+          });
         });
+      });
 
-        // Gallery image modal functionality
-        const galleryItems = document.querySelectorAll('.gallery-item img');
+      projectCards.forEach(card => {
+        card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      });
 
-        galleryItems.forEach(img => {
-            img.addEventListener('click', () => {
-                // Create modal
-                const modal = document.createElement('div');
-                modal.className = 'image-modal';
-                modal.innerHTML = `
-                    <div class="modal-content">
-                        <span class="modal-close">&times;</span>
-                        <img src="${img.src}" alt="${img.alt}" class="modal-image">
-                        <div class="modal-caption">${img.alt}</div>
-                    </div>
-                `;
+      // Card gallery image modal (reuses lightweight modal styles)
+      document.querySelectorAll('.card-gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-modal-img');
+          const modal = document.createElement('div');
+          modal.className = 'image-modal';
+          modal.innerHTML = `
+            <div class="modal-content">
+              <button class="modal-close" aria-label="Close">&times;</button>
+              <img class="modal-image" src="${src}" alt="Project screenshot" />
+            </div>`;
+          document.body.appendChild(modal);
+          document.body.style.overflow = 'hidden';
 
-                document.body.appendChild(modal);
-                document.body.style.overflow = 'hidden';
-
-                // Close modal functionality
-                const closeModal = () => {
-                    document.body.removeChild(modal);
-                    document.body.style.overflow = 'auto';
-                };
-
-                modal.querySelector('.modal-close').addEventListener('click', closeModal);
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) closeModal();
-                });
-
-                // Close on escape key
-                document.addEventListener('keydown', function escapeHandler(e) {
-                    if (e.key === 'Escape') {
-                        closeModal();
-                        document.removeEventListener('keydown', escapeHandler);
-                    }
-                });
-            });
+          const close = () => {
+            if (modal && modal.parentNode) modal.parentNode.removeChild(modal);
+            document.body.style.overflow = 'auto';
+          };
+          modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+          modal.querySelector('.modal-close').addEventListener('click', close);
+          document.addEventListener('keydown', function escHandler(e){
+            if (e.key === 'Escape') { close(); document.removeEventListener('keydown', escHandler); }
+          });
         });
-
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.project-card, .gallery-item, .skill-category').forEach(el => {
-            observer.observe(el);
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
+

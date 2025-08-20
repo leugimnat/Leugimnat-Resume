@@ -397,6 +397,7 @@ span{
     padding: 3rem;
     border-radius: 20px;
     border: 1px solid rgba(230, 139, 4, 0.2);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -474,7 +475,7 @@ span{
 }
 
 .contact-social .social-links a:hover {
-    btnackground: #e68b04;
+    background: #e68b04;
     color: #000;
     transform: translateY(-3px);
 }
@@ -485,6 +486,7 @@ span{
     padding: 3rem;
     border-radius: 20px;
     border: 1px solid rgba(230, 139, 4, 0.2);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -574,9 +576,9 @@ span{
 .btn-loading {
     display: none;
     color:white;
-    align-items: center; 
-    gap: 0.5rem;      
-}  
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .form-status {
     margin-top: 1rem;
@@ -1706,6 +1708,7 @@ span{
   z-index: 10;
   pointer-events: auto;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .filter-btn:hover,
@@ -2452,5 +2455,169 @@ span{
   .tech-tag {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+  }
+}
+
+
+/* Portfolio page utility classes */
+.portfolio-cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-section-dark {
+  background: #111;
+  padding: 4rem 0 8rem;
+}
+
+.card-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Portfolio media-rich cards */
+.project-card.media-rich {
+  padding: 2rem 2rem 2.2rem;
+}
+
+.project-media {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(230,139,4,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-embed iframe,
+.video-embed video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.card-gallery {
+  margin-top: 1.5rem;
+}
+
+.card-gallery h5 {
+  margin: 0 0 1rem 0;
+  color: #e68b04;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card-gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(230,139,4,0.2);
+  background: rgba(230,139,4,0.05);
+  cursor: pointer;
+}
+
+.card-gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightweight image modal for card galleries */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 1rem;
+}
+
+.image-modal .modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #111;
+  border: 2px solid #e68b04;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-modal .modal-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+  object-fit: contain;
+}
+
+.image-modal .modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(230,139,4,0.95);
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+
+
+/* Portfolio one-column layout for projects grid */
+.portfolio-section-dark .container {
+  max-width: 90%;
+}
+
+.portfolio-section-dark .projects-grid {
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+/* Slightly larger media inside media-rich cards */
+.project-card.media-rich .card-gallery-item img {
+  height: 240px;
+}
+
+
+@media (min-width: 992px) {
+  .portfolio-section-dark .container {
+    max-width: 1200px;
+  }
+  .project-card.media-rich .video-embed {
+    padding-top: 45%; /* slightly taller than 16:9 on desktop */
+  }
+  .project-card.media-rich .card-gallery-item img {
+    height: 280px;
   }
 }

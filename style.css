@@ -2147,11 +2147,20 @@ span{
 }
 
 .project-card h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #e68b04;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-card h4 {
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
+  padding: 1rem;
 }
 
 .project-description {

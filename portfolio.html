@@ -1,39 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Project 1</title>
-</head>
-<body>
-	<h1>Portfolio</h1>
-	<nav id="main_nav">
-		<ul>
-			<li><a href="index.html">Resume</a></li>
-			<li><a href="about-me.html">About Me</a></li>
-			<li><a href="portfolio.html">Porfolio</a></li>
-		</ul>
-	</nav>
-	<main>
-		<div>
-			<h3>RequeXU: An Adaptive Web Application for Streamlined Work Order and Dispatch Management</h3>
-			<iframe src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview" width="640" height="480" allow="autoplay"></iframe>
-			<p>The Physical Plant Office (PPO) is an integral part of Xavier University. They handle physical infrastructure and provide manpower for utilities and functions across the different campuses.</p>
-			<p>Previous work order process dealt with paper-based processes, inherent issues with pen-and-paper, amplified by the scale of operations for different campuses, proved ample reason for better technologies and streamlining to be implemented.</p>
-			<p>Features incorporated in the system include request list functions which provide accurate detailing of work order requests.</p>
-			<p>Work order modules provide centralized management of different campus orientations and controlled monitoring and dispatch of manpower and resources.</p>
-			<p>In-app and email notifications for push notifications as well as graphical and analytical data which encourages monitoring of work orders.</p>
-			<p>Providing an accessible work order submission form without the need for manual processes, as well as a centralized dispatch and management of work orders, allows the system to facilitate and serve the students, staff, and faculty of Xavier University across all campuses.</p>
-			<img src="images/Desktop%20and%20PWA%20Mobile%20View.png" alt="Image of Xavier University Work Order Request Form Submission and its Mobile version.">
-			<img src="images/Administrator%20Analytics%20Page.png" alt="Image of Administrator Analaytics panel.">
-			<img src="images/Administrator%20Dashboard.png" alt="Image of administrator dashboard panel.">
-			<img src="images/Administrator%20Request%20View.png" alt="Image of administrator request view for dispatching requests.">
-			<img src="images/Administrator%20Worker%20Analytics%20Page.png" alt="Image for worker analytics for work performance guides.">
-			<img src="images/Email%20Notification.png" alt="Image of email notification from the work order and dispatch management software.">
-			<img src="images/Login%20page%20and%20Google%20Auth.png" alt="Image of login and google authentication page for the software.">
-			<img src="images/Work%20Order%20Request%20Page.png" alt="Image of work order request over view page.">
-			<img src="images/Work%20Order%20Request%20View%20Details.png" alt="Image of work order reuqest descriptive details.">
-			<img src="images/Work%20Order%20Review%20Page.png" alt="Image of work order request review details page.">
-		</div>
-	</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.min.css" />
+    <title>Portfolio - Miguel Antonio V Tan</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo" aria-label="Miguel Antonio V Tan - Home">
+          <span class="logo-text">@leugimnat</span>
+        </a>
+
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="education.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="experience.html" class="nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html" class="nav-link active" aria-current="page">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Portfolio</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero (uses existing experience-hero styles) -->
+      <section class="experience-hero">
+        <div class="hero-content">
+          <h1>Project <span>Portfolio</span></h1>
+          <p class="hero-subtitle">
+            The following are projects that I have worked on. A curated selection of my recent projects across web development, UI, and backend work. Each project highlights my
+            approach to problem‑solving, clean design, and scalable implementation. 
+          </p>
+          <p class="hero-subtitle">
+            My projects right now aren't that much, but I am currently working on a few projects that I will be adding to this portfolio for view.
+          </p>
+          <div class="portfolio-cta">
+            <a class="btn" href="index.html">View Full Website</a>
+            <a class="btn" href="index.html#contact">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid (reuses .projects-grid and .project-card styles) -->
+      <section class="portfolio-section-dark">
+        <div class="container">
+          <h2 class="section-title">Featured <span>Work</span></h2>
+          <div class="gallery-filters">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="web">Web Apps</button>
+            <button type="button" class="filter-btn" data-filter="backend">Backend</button>
+            <button type="button" class="filter-btn" data-filter="design">UI / Front-End</button>
+          </div>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card media-rich" data-category="web">
+              <div class="project-icon"><i class="fa-solid fa-tools"></i></div>
+              <h3>RequeXU: Work Order & Dispatch Management</h3>
+              <h4>Project Overview</h4>
+              <p class="project-description">
+                The Physical Plant Office (PPO) is an integral part of Xavier University, handling physical infrastructure and providing manpower for utilities and functions across different campuses. This project addressed the inefficiencies of their paper-based work order processes.
+              </p>
+              
+              <h4>Problem Statement</h4>
+              <p class="project-description">
+                Previous work order processes dealt with paper-based systems, creating inherent issues amplified by the scale of operations across multiple campuses. This provided ample reason for implementing better technologies and streamlining processes.
+              </p>
+
+              <h4>Solution & Impact</h4>
+              <p class="project-description">
+                The system provides an accessible work order submission form without manual processes, along with centralized dispatch and management capabilities. It successfully facilitates and serves students, staff, and faculty across all Xavier University campuses.
+              </p>
+
+              <div class="project-media">
+                <div class="video-embed" aria-label="RequeXU Demo Video">
+                  <iframe src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview" allow="autoplay" title="RequeXU Project Demo Video"></iframe>
+                </div>
+              </div>
+
+              <div class="card-gallery">
+                <h5>Screenshots</h5>
+                <div class="card-gallery-grid">
+                  <div class="card-gallery-item" data-modal-img="images/requexu/home_page.png">
+                    <img src="images/requexu/home_page.png" alt="RequeXU home page and mobile PWA view" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/admin_dashboard.png">
+                    <img src="images/requexu/admin_dashboard.png" alt="Administrator dashboard panel" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/analytics1.png">
+                    <img src="images/requexu/analytics1.png" alt="Analytics dashboard view" loading="lazy" />
+                  </div>
+                  <div class="card-gallery-item" data-modal-img="images/requexu/request_tab.png">
+                    <img src="images/requexu/request_tab.png" alt="Request management and dispatch" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-features">
+                <h5>Key Features:</h5>
+                <ul>
+                  <li>Request list functions with accurate work order detailing</li>
+                  <li>Centralized management across different campus orientations</li>
+                  <li>Controlled monitoring and dispatch of manpower and resources</li>
+                  <li>In-app and email notifications for real-time updates</li>
+                  <li>Graphical and analytical data for work order monitoring</li>
+                  <li>Google OAuth integration for secure authentication</li>
+                  <li>Mobile-responsive Progressive Web App (PWA)</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel (PHP)</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Google APIs</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">PWA</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="#" aria-disabled="true">Case Study (soon)</a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="design">
+              <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+              <h3>Resume Website</h3>
+              <p class="project-description">
+                A responsive resume site with accessible navigation, contact form, and smooth interactions.
+              </p>
+              <div class="project-features">
+                <h5>Highlights:</h5>
+                <ul>
+                  <li>Modern UI with mobile menu & focus states</li>
+                  <li>Contact form with validation and async submit</li>
+                  <li>Reusable components and typography scale</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="index.html">Open</a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="design">
+              <div class="project-icon"><i class="fa-solid fa-folder-open"></i></div>
+              <h3>Portfolio Website</h3>
+              <p class="project-description">
+                The page you're viewing: standalone portfolio with filters, reusable cards, and consistent branding.
+              </p>
+              <div class="project-features">
+                <h5>Highlights:</h5>
+                <ul>
+                  <li>Category filters and responsive grid</li>
+                  <li>Shared design system with the main site</li>
+                  <li>Clean, accessible markup</li>
+                </ul>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="portfolio.html">Open</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <h3 class="footer-logo">@leugimnat</h3>
+            <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
+            <p class="footer-status">
+              <span class="status-indicator"></span>
+              Open to Front-End / Full-Stack Roles / Internship Opportunities
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-contact">
+              <h4>Get In Touch</h4>
+              <div class="contact-info">
+                <a href="mailto:tan.miguelantoniov@gmail.com" class="contact-email">
+                  <i class="fa-solid fa-envelope"></i>
+                  tan.miguelantoniov@gmail.com
+                </a>
+                <div class="contact-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Cagayan de Oro City, Philippines</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-social">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a href="https://github.com/leugimnat" aria-label="GitHub Profile" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/miguel-antonio-tan-945499255/" aria-label="LinkedIn Profile" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/zeuqzavleugimnat/" aria-label="Facebook Profile" title="Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span class="tech-label">Tech Stack:</span>
+            <div class="tech-stack">
+              <span class="tech-item">HTML</span>
+              <span class="tech-item">CSS</span>
+              <span class="tech-item">JavaScript</span>
+            </div>
+          </div>
+          <p class="footer-note">
+            <i class="fa-solid fa-heart"></i>
+            Crafted with care • Accessible & responsive • Last updated Aug 2025
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Update year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Mobile menu functionality
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navbar = document.querySelector('.navbar');
+
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.contains('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          mobileMenuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Filters for projects
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'block';
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'scale(0.95)';
+              setTimeout(() => {
+                if (card.style.opacity === '0') card.style.display = 'none';
+              }, 200);
+            }
+          });
+        });
+      });
+
+      projectCards.forEach(card => {
+        card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      });
+
+      // Card gallery image modal (reuses lightweight modal styles)
+      document.querySelectorAll('.card-gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-modal-img');
+          const modal = document.createElement('div');
+          modal.className = 'image-modal';
+          modal.innerHTML = `
+            <div class="modal-content">
+              <button class="modal-close" aria-label="Close">&times;</button>
+              <img class="modal-image" src="${src}" alt="Project screenshot" />
+            </div>`;
+          document.body.appendChild(modal);
+          document.body.style.overflow = 'hidden';
+
+          const close = () => {
+            if (modal && modal.parentNode) modal.parentNode.removeChild(modal);
+            document.body.style.overflow = 'auto';
+          };
+          modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+          modal.querySelector('.modal-close').addEventListener('click', close);
+          document.addEventListener('keydown', function escHandler(e){
+            if (e.key === 'Escape') { close(); document.removeEventListener('keydown', escHandler); }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
+

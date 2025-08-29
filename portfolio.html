@@ -1,39 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Miguel Antonio V Tan - Software Developer projects and work">
+    <meta name="keywords" content="Miguel Tan, Portfolio, Projects, RequeXU, Work Order Management, MERN Stack">
+    <meta name="author" content="Miguel Antonio V Tan">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Portfolio - Miguel Antonio V Tan | Software Developer Projects</title>
 </head>
 <body>
-	<h1>Portfolio</h1>
-	<nav id="main_nav">
-		<ul>
-			<li><a href="index.html">Resume</a></li>
-			<li><a href="about-me.html">About Me</a></li>
-			<li><a href="portfolio.html">Porfolio</a></li>
-		</ul>
-	</nav>
-	<main>
-		<div>
-			<h3>RequeXU: An Adaptive Web Application for Streamlined Work Order and Dispatch Management</h3>
-			<iframe src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview" width="640" height="480" allow="autoplay"></iframe>
-			<p>The Physical Plant Office (PPO) is an integral part of Xavier University. They handle physical infrastructure and provide manpower for utilities and functions across the different campuses.</p>
-			<p>Previous work order process dealt with paper-based processes, inherent issues with pen-and-paper, amplified by the scale of operations for different campuses, proved ample reason for better technologies and streamlining to be implemented.</p>
-			<p>Features incorporated in the system include request list functions which provide accurate detailing of work order requests.</p>
-			<p>Work order modules provide centralized management of different campus orientations and controlled monitoring and dispatch of manpower and resources.</p>
-			<p>In-app and email notifications for push notifications as well as graphical and analytical data which encourages monitoring of work orders.</p>
-			<p>Providing an accessible work order submission form without the need for manual processes, as well as a centralized dispatch and management of work orders, allows the system to facilitate and serve the students, staff, and faculty of Xavier University across all campuses.</p>
-			<img src="images/Desktop%20and%20PWA%20Mobile%20View.png" alt="Image of Xavier University Work Order Request Form Submission and its Mobile version.">
-			<img src="images/Administrator%20Analytics%20Page.png" alt="Image of Administrator Analaytics panel.">
-			<img src="images/Administrator%20Dashboard.png" alt="Image of administrator dashboard panel.">
-			<img src="images/Administrator%20Request%20View.png" alt="Image of administrator request view for dispatching requests.">
-			<img src="images/Administrator%20Worker%20Analytics%20Page.png" alt="Image for worker analytics for work performance guides.">
-			<img src="images/Email%20Notification.png" alt="Image of email notification from the work order and dispatch management software.">
-			<img src="images/Login%20page%20and%20Google%20Auth.png" alt="Image of login and google authentication page for the software.">
-			<img src="images/Work%20Order%20Request%20Page.png" alt="Image of work order request over view page.">
-			<img src="images/Work%20Order%20Request%20View%20Details.png" alt="Image of work order reuqest descriptive details.">
-			<img src="images/Work%20Order%20Review%20Page.png" alt="Image of work order request review details page.">
-		</div>
-	</main>
+    <!-- Header Component -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Miguel Antonio V Tan - Home">
+                <span class="logo-text">@leugimnat</span>
+            </a>
+
+            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="education.html" class="nav-link">
+                            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experience.html" class="nav-link">
+                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link active" aria-current="page">
+                            <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="portfolio-page">
+        <section class="portfolio-hero">
+            <div class="container">
+                <h1>My <span>Portfolio</span></h1>
+                <p class="hero-subtitle">Showcasing projects that demonstrate my skills and passion for software development</p>
+            </div>
+        </section>
+
+        <section class="portfolio-content">
+            <div class="container">
+                <div class="project-card featured-project">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-tools"></i>
+                        </div>
+                        <h3>RequeXU: Work Order Management System</h3>
+                        <p class="project-subtitle">An Adaptive Web Application for Streamlined Work Order and Dispatch Management</p>
+                    </div>
+
+                    <div class="project-demo">
+                        <iframe
+                            src="https://drive.google.com/file/d/19_s7sZjtHk4iqx57pkY2Jv9SXwK3KaVR/preview"
+                            width="100%"
+                            height="400"
+                            allow="autoplay"
+                            title="RequeXU Project Demo"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <div class="project-description">
+                        <h4>Project Overview</h4>
+                        <p>The Physical Plant Office (PPO) is an integral part of Xavier University, handling physical infrastructure and providing manpower for utilities and functions across different campuses.</p>
+
+                        <h4>Problem Statement</h4>
+                        <p>Previous work order processes dealt with paper-based systems. The inherent issues with pen-and-paper processes, amplified by the scale of operations across different campuses, proved ample reason for implementing better technologies and streamlining.</p>
+
+                        <h4>Solution Features</h4>
+                        <ul class="feature-list">
+                            <li><strong>Request List Functions:</strong> Accurate detailing of work order requests</li>
+                            <li><strong>Work Order Modules:</strong> Centralized management of different campus orientations</li>
+                            <li><strong>Monitoring & Dispatch:</strong> Controlled monitoring and dispatch of manpower and resources</li>
+                            <li><strong>Notifications:</strong> In-app and email notifications for push notifications</li>
+                            <li><strong>Analytics:</strong> Graphical and analytical data for monitoring work orders</li>
+                        </ul>
+
+                        <h4>Impact</h4>
+                        <p>The system provides an accessible work order submission form without manual processes, along with centralized dispatch and management, facilitating service for students, staff, and faculty across all Xavier University campuses.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <h4>Technologies Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Google OAuth</span>
+                            <span class="tech-tag">Email Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery">
+                        <h4>Project Screenshots</h4>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="images/Desktop%20and%20PWA%20Mobile%20View.png" alt="Xavier University Work Order Request Form - Desktop and Mobile PWA View" loading="lazy">
+                                <div class="gallery-caption">Desktop and Mobile PWA View</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Administrator%20Analytics%20Page.png" alt="Administrator Analytics Panel" loading="lazy">
+                                <div class="gallery-caption">Administrator Analytics Panel</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Administrator%20Dashboard.png" alt="Administrator Dashboard Panel" loading="lazy">
+                                <div class="gallery-caption">Administrator Dashboard</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Administrator%20Request%20View.png" alt="Administrator Request View for Dispatching" loading="lazy">
+                                <div class="gallery-caption">Request Dispatching Interface</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Administrator%20Worker%20Analytics%20Page.png" alt="Worker Analytics for Performance Monitoring" loading="lazy">
+                                <div class="gallery-caption">Worker Performance Analytics</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Email%20Notification.png" alt="Email Notification System" loading="lazy">
+                                <div class="gallery-caption">Email Notification System</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Login%20page%20and%20Google%20Auth.png" alt="Login Page with Google Authentication" loading="lazy">
+                                <div class="gallery-caption">Google OAuth Login</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Work%20Order%20Request%20Page.png" alt="Work Order Request Overview Page" loading="lazy">
+                                <div class="gallery-caption">Work Order Request Overview</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Work%20Order%20Request%20View%20Details.png" alt="Work Order Request Detailed View" loading="lazy">
+                                <div class="gallery-caption">Request Details View</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/Work%20Order%20Review%20Page.png" alt="Work Order Review Page" loading="lazy">
+                                <div class="gallery-caption">Work Order Review Interface</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">@leugimnat</h3>
+                    <p class="footer-name">&copy; <span id="year"></span> Miguel Antonio V Tan</p>
+                    <p class="footer-status">
+                        <span class="status-indicator" aria-hidden="true"></span>
+                        Open to Front-End / Full-Stack Roles
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-contact">
+                        <h4>Get In Touch</h4>
+                        <div class="contact-info">
+                            <a href="mailto:tan.miguelantoniov@gmail.com" class="contact-email">
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                tan.miguelantoniov@gmail.com
+                            </a>
+                            <div class="contact-location">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span>Cagayan de Oro City, Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/miguelantoniov" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/leugimnat" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-tech">
+                    <span class="tech-label">Tech Stack:</span>
+                    <div class="tech-stack">
+                        <span class="tech-item">HTML</span>
+                        <span class="tech-item">CSS</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Node.js</span>
+                    </div>
+                </div>
+                <p class="footer-note">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    Crafted with care • Accessible & responsive • Last updated <time datetime="2025-08">Aug 2025</time>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modules -->
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

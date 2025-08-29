@@ -286,6 +286,7 @@ section{
     align-items: center;
     gap: 8rem;
     background-color: black;
+    padding-top: 8rem; /* Add extra padding to account for fixed navbar */
 }
 
 .home .home-content h1{

@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Educational background and achievements of Miguel Antonio V Tan - BS Information Technology graduate">
-    <meta name="keywords" content="Miguel Tan, Education, Xavier University, Information Technology, Dean's List">
-    <meta name="author" content="Miguel Antonio V Tan">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/main.css">
-
-    <title>Education - Miguel Antonio V Tan | BS Information Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Education - Miguel Antonio V Tan</title>
 </head>
 <body>
     <header class="navbar">
@@ -590,12 +585,148 @@
         </div>
     </div>
 
-    <!-- JavaScript Modules -->
-    <script src="js/utils.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        // Update year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navbar = document.querySelector('.navbar');
 
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+
+            // Update aria-expanded attribute
+            const isExpanded = navMenu.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close mobile menu when clicking on nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryModal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+        const expandBtns = document.querySelectorAll('.gallery-expand');
+
+        console.log('Gallery elements found:', {
+            filterBtns: filterBtns.length,
+            galleryItems: galleryItems.length,
+            expandBtns: expandBtns.length
+        });
+
+        // Filter functionality
+        filterBtns.forEach((btn, index) => {
+            console.log(`Setting up filter button ${index}:`, btn.textContent, btn.getAttribute('data-filter'));
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                console.log('Filter clicked:', btn.getAttribute('data-filter'));
+
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                console.log('Filtering by:', filter);
+
+                galleryItems.forEach((item, itemIndex) => {
+                    const category = item.getAttribute('data-category');
+                    console.log(`Item ${itemIndex} category:`, category, 'Filter:', filter);
+
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            if (item.style.opacity === '0') {
+                                item.style.display = 'none';
+                            }
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Add smooth transitions to gallery items
+        galleryItems.forEach(item => {
+            item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        });
+
+        // Modal functionality
+        expandBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const img = btn.closest('.gallery-item').querySelector('img');
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                galleryModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        if (modalClose) {
+            modalClose.addEventListener('click', () => {
+                galleryModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close modal when clicking outside
+        if (galleryModal) {
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) {
+                    galleryModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && galleryModal && galleryModal.classList.contains('active')) {
+                galleryModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
